@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 atm, this app functions as a vehicle for presenting artwork collected and..or constructed by myself, and displayed in various contexts within my living space.
 
 ## Tron
+
+![Three lightcycles lined up and ready for the race](public/tron/tron-stills_063.jpg)
+
 The first collection of images come from a series of >400 stills I generated from the movie, Tron (1982), a movie I saw in the theater at least 5 times when it was out.
 
 Funny aside, myself and my friends kept getting each of our respective parents to take us all to see the film, so worry not, it wasn't one kid's parents sitting through the film repeatedly (though I'm sure they enjoyed it).
@@ -15,7 +18,7 @@ https://soundcloud.com/richiehawtin/richie-hawtin-decks-efx-909-01
 
 
 
-# Further out
+# Notes for the Future
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
