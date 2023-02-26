@@ -1,8 +1,8 @@
 import fs from "fs";
 
-let tronArray = [];
-
 export default function handler(req, res) {
+  let tronArray = [];
+  
   fs.readdir("public/tron", (err, files) => {
     if (err) {
       console.error(err);
@@ -15,8 +15,6 @@ export default function handler(req, res) {
 
     res.status(200).json({ tronArray: tronArray });
   });
-
-  
-};
+}
 
 // export default TronImages;

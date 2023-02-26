@@ -15,10 +15,10 @@ The soundtrack to the construction of this Tron portion of the app comes courtes
 
 https://soundcloud.com/richiehawtin/richie-hawtin-decks-efx-909-01
 
+<br>
 
 
-
-# Notes for the Future
+# Notes for Future
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
