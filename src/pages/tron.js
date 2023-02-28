@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 
 import "./tron.scss";
 
@@ -14,8 +13,7 @@ export default function Looper() {
   // Making setInterval Declarative with React Hooks
   // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
   //
-  // Really gottta figure out how this thing works.
-  //
+  // Really gottta figure
   function useInterval(callback, delay) {
     const savedCallback = useRef();
 
@@ -75,15 +73,12 @@ export default function Looper() {
     <>
       <div className="page page--tron">
         <div className="img-container">
-          <Image
+          <img
             className={`tron-image ${
               fadeIn ? "tron-image--fade-in" : "tron-image--fade-out"
             }`}
             src={`/tron/${currentImage}`}
             alt="Still image from the movie Tron. Sorry this isn't more descriptive. The images are setup programatically and I'm not sure how to get a good description to display here."
-            fill
-            sizes="100vw"
-            priority={true}
           />
         </div>
       </div>
