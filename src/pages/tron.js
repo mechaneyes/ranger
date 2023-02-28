@@ -42,7 +42,10 @@ export default function Looper() {
       .then((data) => {
         console.log("data", data);
         setData(data);
-        setCurrentImage(data.tronArray[0].file);
+        setCurrentImage("tron-stills_056.jpg");
+        setTimeout(() => {
+          setFadeIn(false);
+        }, 9000);
       });
   }, []);
 
@@ -50,9 +53,11 @@ export default function Looper() {
     if (currentIndex >= data.tronArray.length) {
       setCurrentImage(data.tronArray[0].file);
       setCurrentIndex(1);
+      console.log("currentImageZero", data.tronArray[currentIndex].file);
     } else {
       setCurrentImage(data.tronArray[currentIndex].file);
       setCurrentIndex(currentIndex + 1);
+      console.log("currentImage", data.tronArray[currentIndex].file);
     }
 
     setTimeout(() => {
@@ -62,8 +67,6 @@ export default function Looper() {
     setTimeout(() => {
       setFadeIn(false);
     }, 9000);
-
-    // console.log("currentImage", data.tronArray[currentIndex].file);
   }, 10000);
 
   return (

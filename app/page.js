@@ -14,9 +14,9 @@ const TronImages = () => {
 
     // console.log("files", files);
 
-    tronArray = files
+    tronArray = files;
     // console.log('tronArray', tronArray)
-    return tronArray
+    return tronArray;
 
     // files.map((file) => {
     //   let tronUrl = `tron-images/${file}`;
@@ -25,55 +25,38 @@ const TronImages = () => {
     // });
   });
 
-  return <img src={`/tron-images/${tronArray[0]}`} />
+  return <img src={`/tron-images/${tronArray[0]}`} />;
   return console.log("tronArray outside", tronArray[0]);
 
   return tronArray.map((tron) => {
     // return <p>{tron}</p>
-    return <img src={`/tron-images/${tron}`} alt="Picture of the author" width={500} height={500} />;
+    return (
+      <img
+        src={`/tron-images/${tron}`}
+        alt="Picture of the author"
+        width={500}
+        height={500}
+      />
+    );
   });
 };
 
 export default function Page() {
-  // let tronArray = [];
-
-  // function mapTron(files) {
-  //   console.log("tronArray", tronArray[0]);
-  // };
-
-  // const getTron = () => {
-  //   fs.readdir("./app/tron-images/", (err, files) => {
-  //     if (err) {
-  //       console.error(err);
-  //       return;
-  //     }
-
-  //     files.map((file) => {
-  //       let tronUrl = `tron-images/${file}`;
-  //       // console.log("tronUrl", tronUrl);
-  //       tronArray.push({ tronUrl });
-  //     });
-
-  //     mapTron(files);
-  //   });
-  // };
-
   return (
     <>
-      <h1>Hello, Next.js!</h1>
-      <p>hello</p>
+      <h1>
+        <a href="/tron">Tron</a>
+      </h1>
 
-      {/* {setTimeout(() => {
-        console.log("tronArray", tronArray);
-      }, 1000)} */}
-
-      <TronImages />
-
-      {/* <Image
-        src={tronArray[0]}
-        alt="Picture of the author"
-        width={500}
-      /> */}
+      <Image
+        className={`tron-image ${
+          fadeIn ? "tron-image--fade-in" : "tron-image--fade-out"
+        }`}
+        src={`/tron/${currentImage}`}
+        alt="Still image from the movie Tron. Sorry this isn't more descriptive. The images are setup programatically and I'm not sure how to get a good description to display here."
+        fill
+        sizes="100vw"
+      />
     </>
   );
 }
