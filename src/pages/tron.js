@@ -4,8 +4,10 @@ import Image from "next/image";
 import "./tron.scss";
 
 export default function Looper() {
+  let firstImage = "../../public/tron/tron-stills_056.jpg";
+
   const [data, setData] = useState(null);
-  const [currentImage, setCurrentImage] = useState("../../public/tron/tron-stills_056.jpg");
+  const [currentImage, setCurrentImage] = useState(firstImage);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
 
@@ -81,6 +83,7 @@ export default function Looper() {
             alt="Still image from the movie Tron. Sorry this isn't more descriptive. The images are setup programatically and I'm not sure how to get a good description to display here."
             fill
             sizes="100vw"
+            priority={true}
           />
         </div>
       </div>
