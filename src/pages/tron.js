@@ -4,7 +4,7 @@ import Image from "next/image";
 import "./tron.scss";
 
 export default function Looper() {
-  let firstImage = "../../public/tron/tron-stills_056.jpg";
+  let firstImage = "tron-stills_056.jpg";
 
   const [data, setData] = useState(null);
   const [currentImage, setCurrentImage] = useState(firstImage);
