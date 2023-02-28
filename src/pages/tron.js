@@ -44,7 +44,7 @@ export default function Looper() {
       .then((data) => {
         console.log("data", data);
         setData(data);
-        // setCurrentImage("tron-stills_056.jpg");
+        setCurrentImage("tron-stills_056.jpg");
         setTimeout(() => {
           setFadeIn(false);
         }, 9000);
