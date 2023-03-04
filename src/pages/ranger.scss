@@ -5,12 +5,12 @@
 
 // if viewport is portrait vs landscape set grid accordingly
 //
-@mixin is-vert($is-vert) {
-  @if $is-vert == true {
+@mixin grid-vert($grid-vert) {
+  @if $grid-vert == true {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
   } @else {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
   }
 }
@@ -38,11 +38,11 @@ body {
     justify-content: center;
 
     @media (orientation: portrait) {
-      @include is-vert(true);
+      @include grid-vert(true);
     }
 
     @media (orientation: landscape) {
-      @include is-vert(false);
+      @include grid-vert(false);
     }
   }
 }
@@ -58,7 +58,7 @@ body {
     height: var(--img-height);
     width: 100%;
     height: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: auto;
     object-fit: contain;
   }
 
