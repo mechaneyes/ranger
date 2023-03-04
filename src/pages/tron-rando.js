@@ -2,12 +2,11 @@ import { useState, useRef, useEffect } from "react";
 
 import "./tron.scss";
 
-export default function Looper() {
+export default function TronRando() {
   let firstImage = "tron-stills_056.jpg";
 
   const [data, setData] = useState(null);
   const [currentImage, setCurrentImage] = useState(firstImage);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeIn, setFadeIn] = useState(true);
 
   // Making setInterval Declarative with React Hooks
@@ -43,23 +42,19 @@ export default function Looper() {
       .then((data) => {
         console.log("data", data);
         setData(data);
-        // setCurrentImage("tron-stills_056.jpg");
         setTimeout(() => {
           setFadeIn(false);
         }, 9000);
       });
   }, []);
 
+  const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
   useInterval(() => {
-    if (currentIndex >= data.tronArray.length) {
-      setCurrentImage(data.tronArray[0].file);
-      setCurrentIndex(1);
-      // console.log("currentImageZero", data.tronArray[currentIndex].file);
-    } else {
-      setCurrentImage(data.tronArray[currentIndex].file);
-      setCurrentIndex(currentIndex + 1);
-      console.log("currentImage", data.tronArray[currentIndex].file);
-    }
+    setCurrentImage(data.tronArray[getRandomInt(data.tronArray.length)].file);
+    // console.log(getRandomInt(data.tronArray.length));
 
     setTimeout(() => {
       setFadeIn(true);
