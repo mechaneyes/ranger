@@ -46,6 +46,15 @@ export default function RingersRando() {
           setFadeIn(false);
         }, 9000);
       });
+
+    const root = document.documentElement;
+    if (window.innerWidth > window.innerHeight) {
+        root.style.setProperty("--img-width", "auto");
+        root.style.setProperty("--img-height", "100%");
+    } else {
+        root.style.setProperty("--img-width", "100%");
+        root.style.setProperty("--img-height", "auto");
+    }
   }, []);
 
   const getRandomInt = (max) => {
@@ -81,7 +90,7 @@ export default function RingersRando() {
   return (
     <>
       <div className="page page--tron">
-        <div className="img-container">
+        <div className="img-container img-container--squares">
           <img
             className={`ranger-image ringers-image ${
               fadeIn ? "ranger-image--fade-in" : "ranger-image--fade-out"
