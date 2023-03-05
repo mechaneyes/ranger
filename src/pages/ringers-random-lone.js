@@ -11,7 +11,8 @@ export default function RingersRandomLone() {
   // Making setInterval Declarative with React Hooks
   // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
   //
-  // Really gottta figure
+  // Really gottta figure out how this works
+  //
   function useInterval(callback, delay) {
     const savedCallback = useRef();
 
@@ -34,16 +35,12 @@ export default function RingersRandomLone() {
   }
 
   useEffect(() => {
-    setCurrentImage(firstImage);
     setData(null);
     fetch("/api/ringers-api")
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
+        // console.log("data", data);
         setData(data);
-        setTimeout(() => {
-          setFadeIn(false);
-        }, 9000);
       });
 
     const root = document.documentElement;
@@ -56,25 +53,22 @@ export default function RingersRandomLone() {
       root.style.setProperty("--img-width", "100%");
       root.style.setProperty("--img-height", "auto");
     }
+
+    setTimeout(() => {
+      setFadeIn(false);
+    }, randomInterval.current - 1000);
   }, []);
 
-  const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-  };
-
-  // get random in between 3 and 10 seconds at 1000ms intervals
-  //   randomInterval.current = Math.floor(Math.random() * 7000) + 3000;
-
   useInterval(() => {
-    randomInterval.current = Math.floor(Math.random() * 8000) + 5000;
-    console.log(
-      "// ————————————————————————————————————o start —>",
-      randomInterval.current
-    );
+    randomInterval.current = Math.floor(Math.random() * 15000) + 10000;
+
+    const getRandomInt = (max) => {
+      return Math.floor(Math.random() * max);
+    };
+    const randomInt = getRandomInt(data.rangerArray.length);
 
     // image file names are 6 digits long, so we
     // need to pad the random number
-    const randomInt = getRandomInt(data.rangerArray.length);
     const padNumber = (randomInt) => {
       if (randomInt < 10) {
         return `00000${randomInt}`;
