@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import RingersRandomOne from "./ringers-random-one";
+import RingersRandomLone from "./ringers-random-lone";
 import "./ranger.scss";
 
 export default function RingersRando() {
@@ -21,10 +21,10 @@ export default function RingersRando() {
     <>
       <div className="page page--square--double">
         <div className="img-container img-container--squares">
-          <RingersRandomOne />
+          <RingersRandomLone />
         </div>
         <div className="img-container img-container--squares">
-          <RingersRandomOne />
+          <RingersRandomLone />
         </div>
       </div>
     </>

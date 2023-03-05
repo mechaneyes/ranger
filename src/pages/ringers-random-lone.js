@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export default function RingersRandomOne() {
+export default function RingersRandomLone() {
   let firstImage = "000303.png";
 
   const [data, setData] = useState(null);
