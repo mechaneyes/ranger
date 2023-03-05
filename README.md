@@ -17,6 +17,30 @@ https://soundcloud.com/richiehawtin/richie-hawtin-decks-efx-909-01
 
 <br>
 
+## Ringers
+![Dmitri Cherniak, Ringers #373 (Very formalist design with circles wrapped in and around by a yellow colored shape)](public/ringers/000373.png)
+
+I lifted the Ringers images build out in the project of the same name by Dmitri Cherniak.
+
+https://www.artblocks.io/collections/curated/projects/0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270/13?section=details
+
+https://twitter.com/dmitricherniak
+
+There are 1000 images I don't remember where exactly I found the images, but I vaguely do remember coding something that grabbed them all for me.
+
+There are multiple ways they're displayed on various pages in Ranger. A single image vs double images set on fixed timers. And a double image layout running on random timers. Pretty happy with the solution I found for that.
+
+Oh, and the layouts work in portrait or landscape, reoriening the presentation with the help of Sass conditionals.
+
+<br>
+
+## Designers Republic
+![DR](public/dr/E_EMIGRE_01_MAGAZINE_FRONT-757x1024.jpg)
+
+Mo images
+
+<br>
+
 
 # Notes for Future
 ## Deploy on Vercel
